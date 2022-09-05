@@ -38,7 +38,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-  pdftitle={RMarkdown, Bookdown or Clavertondown?},
+  pdftitle={RMarkdown, Bookdown or ClavertonDown?},
   pdfauthor={Emma Cliffe, Skills Centre: MASH},
   colorlinks=true,
   linkcolor={blue},
@@ -81,7 +81,7 @@
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 
-\title{RMarkdown, Bookdown or Clavertondown?}
+\title{RMarkdown, Bookdown or ClavertonDown?}
 \author{Emma Cliffe, Skills Centre: MASH}
 \date{}
 
@@ -92,7 +92,7 @@
 \usepackage{spverbatim}
 \makeatletter
 \@ifpackageloaded{float}{}{\usepackage{float}}
-\@ifpackageloaded{adjustbox}{}{\usepackage[Export]{adjustbox}}
+\@ifpackageloaded{adjustbox}{}{\usepackage{adjustbox}}
 \makeatother
 \floatplacement{figure}{H}
 \newcommand{\scalefactor}{1.7}
@@ -266,6 +266,8 @@
   \begin{itemize}
   \tightlist
   \item
+    Bookdown features but with transformation to Word
+  \item
     Flexible theorem-like environments akin to newtheorem in LaTeX including styling, numbering and classification of type to enable structured colour
 
     \begin{itemize}
@@ -284,9 +286,9 @@
       Repeating theorem-like environments
     \end{itemize}
   \item
-    Inclusion of figures in WHATSIT custom blocks
+    Inclusion of figures in knitr engine based custom blocks including all theorem-like
   \item
-    Limited control over visual presentation to enable a coherent set of notes with
+    Supplied limited controls over visual presentation to enable a coherent set of notes with
 
     \begin{itemize}
     \tightlist

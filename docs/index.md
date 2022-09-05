@@ -1,5 +1,5 @@
 ---
-title: "RMarkdown, Bookdown or Clavertondown?"
+title: "RMarkdown, Bookdown or ClavertonDown?"
 author: 'Emma Cliffe, Skills Centre: MASH'
 site: bookdown::bookdown_site
 language: en
@@ -98,6 +98,7 @@ header-includes:
 
 * Designed to enable authors of **lecture notes** to meet the diverse needs of students by production of a coherent **set** of formats
 * Needed for:
+  * Bookdown features but with transformation to Word 
   * Flexible theorem-like environments akin to newtheorem in LaTeX including styling, numbering and classification of type to enable structured colour
     * Numbering system of inbuilt Bookdown theorems can be changed
     * It is possible to reference other environments within theorem names
@@ -105,8 +106,8 @@ header-includes:
     * Shared numbering e.g. between theorem and proposition 
     * Newtheorem-type definition of theorem-like environments
     * Repeating theorem-like environments
-  * Inclusion of figures in WHATSIT custom blocks
-  * Limited control over visual presentation to enable a coherent set of notes with 
+  * Inclusion of figures in knitr engine based custom blocks including all theorem-like 
+  * Supplied limited controls over visual presentation to enable a coherent set of notes with 
     * Known accessibility features
     * Clear visual markers of structure
 * Output as a mini-linked site of a set of formats which can include HTML book, HTML page, Word, EPub3, standard PDF, clear print PDF and large print PDF
