@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="RMarkdown, Bookdown or Clavertondown?" />
+<meta property="og:type" content="book" />
+
+
+
+
+
+<meta name="author" content="Emma Cliffe, Skills Centre: MASH" />
+
+
+
+<meta name="description" content="RMarkdown, Bookdown or Clavertondown?">
+
+<title>RMarkdown, Bookdown or Clavertondown?</title>
+
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+</style>
+
+<style type="text/css">
+  a {
+   color: blue;
+  }
+
+  [custom-style=DefinitionStyle] {
+    margin-bottom: 1.5em;
+    margin-top:1.5em;
+    background-color: AliceBlue;
+    border-left-style: solid;
+    border-color: CadetBlue;
+    padding-left: 0.5em;
+  }
+
+  [custom-style=TheoremStyle] {
+    margin-bottom: 1.5em;
+    margin-top:1.5em;
+    background-color: honeydew;
+    border-left-style: solid;
+    border-color: darkseagreen;
+    padding-left: 0.5em;
+    font-style: italic;
+  }
+
+  [custom-style=TheoremStyleUpright] {
+    margin-bottom: 1.5em;
+    margin-top:1.5em;
+    background-color: honeydew;
+    border-left-style: solid;
+    border-color: darkseagreen;
+    padding-left: 0.5em;
+    font-style: normal;
+  }
+
+  [custom-style=NameStyle]{
+    font-style: normal;
+    font-weight: bold;
+  }
+
+  [custom-style=NameStyleItalics]{
+    font-style: italic;
+  }
+
+  
+  [custom-style=ProofStyle] {
+    margin-bottom: 1.5em;
+    margin-top:1.5em;
+    background-color: seashell;
+    border-left-style: solid;
+    border-color: darkkhaki;
+    padding-left: 0.5em;
+  }
+
+  [custom-style=ExampleStyle] {
+    margin-bottom: 1.5em;
+    margin-top:1.5em;
+    background-color: lavenderblush;
+    border-left-style: solid;
+    border-color: mediumorchid;
+    padding-left: 0.5em;
+  }
+
+  [data-custom-style=DefinitionStyle] {
+    margin-bottom: 1.5em;
+    margin-top:1.5em;
+    background-color: AliceBlue;
+    border-left-style: solid;
+    border-color: CadetBlue;
+    padding-left: 0.5em;
+  }
+
+  [data-custom-style=TheoremStyle] {
+    margin-bottom: 1.5em;
+    margin-top:1.5em;
+    background-color: honeydew;
+    border-left-style: solid;
+    border-color: darkseagreen;
+    padding-left: 0.5em;
+  }
+
+  [data-custom-style=TheoremStyleUpright] {
+    margin-bottom: 1.5em;
+    margin-top:1.5em;
+    background-color: honeydew;
+    border-left-style: solid;
+    border-color: darkseagreen;
+    padding-left: 0.5em;
+    font-style: normal;
+  }
+  
+  [data-custom-style=ProofStyle] {
+    margin-bottom: 1.5em;
+    margin-top:1.5em;
+    background-color: seashell;
+    border-left-style: solid;
+    border-color: darkkhaki;
+    padding-left: 0.5em;
+  }
+
+  [data-custom-style=ExampleStyle] {
+    margin-bottom: 1.5em;
+    margin-top:1.5em;
+    background-color: lavenderblush;
+    border-left-style: solid;
+    border-color: mediumorchid;
+    padding-left: 0.5em;
+  }
+
+  
+</style>
+
+</head>
+
+<body>
+
+<div class="container-fluid main-container">
+
+
+<!--bookdown:title:start-->
+<div id="header">
+<h1 class="title">RMarkdown, Bookdown or Clavertondown?</h1>
+<h4 class="author"><em>Emma Cliffe, Skills Centre: MASH</em></h4>
+</div>
+<!--bookdown:title:end-->
+
+<!--bookdown:toc:start-->
+<div id="TOC">
+<ul>
+<li><a href="#an-introduction">An introduction</a></li>
+<li><a href="#requirements"><span class="toc-section-number">1</span> Requirements</a></li>
+<li><a href="#formats-and-transforms"><span class="toc-section-number">2</span> Formats and transforms</a></li>
+<li><a href="#rmarkdown"><span class="toc-section-number">3</span> RMarkdown</a></li>
+<li><a href="#bookdown"><span class="toc-section-number">4</span> Bookdown</a></li>
+<li><a href="#clavertondown"><span class="toc-section-number">5</span> ClavertonDown</a></li>
+<li><a href="#more-information"><span class="toc-section-number">6</span> More information</a></li>
+</ul>
+</div>
+<!--bookdown:toc:end-->
+
+<!--bookdown:body:start-->
+<div id="an-introduction" class="section level1 unnumbered">
+<h1>An introduction</h1>
+<ul>
+<li>Requirements</li>
+<li>Formats and transforms</li>
+<li>RMarkdown</li>
+<li>Bookdown</li>
+<li>Clavertondown</li>
+</ul>
+</div>
+<div id="requirements" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Requirements</h1>
+<ul>
+<li>Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations requires at least one of:
+<ul>
+<li><a href="https://accessibilityinsights.io/docs/en/web/overview">Web: WCAG 2.1 AA</a> + <a href="https://docs.mathjax.org/en/v2.7-latest/misc/accessibility-features.html">MathJax!</a></li>
+<li><a href="https://support.office.com/en-gb/article/make-your-word-documents-accessible-to-people-with-disabilities-d9bf3683-87ac-47ea-b91a-78dcacb3c66d">Word 365: Accessibility checker + Equation editor</a></li>
+<li><a href="https://support.microsoft.com/en-us/office/make-your-powerpoint-presentations-accessible-to-people-with-disabilities-6f7772b2-2f33-4bd2-8ca7-dae3b2b3ef25">PowerPoint 365: Accessibility checker + Equation editor</a></li>
+<li><a href="https://docs.mathjax.org/en/v2.7-latest/misc/epub.html">EPub3 with MathML</a></li>
+</ul></li>
+<li>Equality Act 2010
+<ul>
+<li>Authors may need to provide additional formats to meet the needs of a specific student</li>
+</ul></li>
+</ul>
+</div>
+<div id="formats-and-transforms" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Formats and transforms</h1>
+<!-- this will only work in large and clear print if you remove export from adjustbox, find out why -->
+<div class="figure"><span id="fig:unnamed-chunk-1"></span>
+<iframe src="https://www.mindomo.com/mindmap/document-transforms-2d8186b662758e26ccf50ef82a3828b2?embed" width="100%" height="400px" data-external="1">
+</iframe>
+<p class="caption">
+Figure 2.1: Accessible and interactive map at <a href="https://www.mindomo.com/mindmap/document-transforms-2d8186b662758e26ccf50ef82a3828b2" class="uri">https://www.mindomo.com/mindmap/document-transforms-2d8186b662758e26ccf50ef82a3828b2</a>
+</p>
+</div>
+</div>
+<div id="rmarkdown" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> RMarkdown</h1>
+<ul>
+<li>Simple one page documents
+<ul>
+<li>Accessible: HTML, Word</li>
+<li>Accessible if no mathematical content: ODT, RTF</li>
+<li>Inaccessible: LaTeX/PDF</li>
+</ul></li>
+<li>Slides
+<ul>
+<li>Possibly accessible: PowerPoint, HTML using ioslides, reveal.js, Slidy</li>
+<li>Inaccessible: LaTeX/Beamer</li>
+</ul></li>
+</ul>
+</div>
+<div id="bookdown" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Bookdown</h1>
+<ul>
+<li>Designed to enable authors of <strong>books</strong> or longer structured documents</li>
+<li>Needed for:
+<ul>
+<li>Parts and appendices</li>
+<li>Finer control of figures</li>
+<li>Automatic numbering and cross-referencing of figures, tables with captions</li>
+<li>Cross referencing of pieces of text</li>
+<li>Equation numbering and referencing</li>
+<li>Theorem and proof environments with numbering and referencing</li>
+<li>Definition of custom environments</li>
+<li>Citation management via Pandoc, biblatex or natbib</li>
+<li>Embedding of web pages and HTML widgets</li>
+</ul></li>
+<li>Output to HTML book, LaTeX/PDF and EPub3 only</li>
+</ul>
+</div>
+<div id="clavertondown" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> ClavertonDown</h1>
+<ul>
+<li>Designed to enable authors of <strong>lecture notes</strong> to meet the diverse needs of students by production of a coherent <strong>set</strong> of formats</li>
+<li>Needed for:
+<ul>
+<li>Flexible theorem-like environments akin to newtheorem in LaTeX including styling, numbering and classification of type to enable structured colour
+<ul>
+<li>Numbering system of inbuilt Bookdown theorems can be changed</li>
+<li>It is possible to reference other environments within theorem names</li>
+<li>Unnumbered theorem environments</li>
+<li>Shared numbering e.g. between theorem and proposition</li>
+<li>Newtheorem-type definition of theorem-like environments</li>
+<li>Repeating theorem-like environments</li>
+</ul></li>
+<li>Inclusion of figures in WHATSIT custom blocks</li>
+<li>Limited control over visual presentation to enable a coherent set of notes with
+<ul>
+<li>Known accessibility features</li>
+<li>Clear visual markers of structure</li>
+</ul></li>
+</ul></li>
+<li>Output as a mini-linked site of a set of formats which can include HTML book, HTML page, Word, EPub3, standard PDF, clear print PDF and large print PDF</li>
+</ul>
+</div>
+<div id="more-information" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> More information</h1>
+<ul>
+<li><a href="https://bathmash.github.io/clavertondown/">ClavertonDown</a></li>
+<li><a href="https://www.bath.ac.uk/projects/mathematics-accessibility/">MASH Accessible Maths project</a></li>
+</ul>
+<!--chapter:end:index.Rmd-->
+</div>
+<!--bookdown:body:end-->
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+</body>
+</html>
