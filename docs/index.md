@@ -15,6 +15,13 @@ output:
       download: [["Notes.html", "HTML page"], ["Notes.pdf","Standard print PDF"], ["NotesClear.pdf","Clear print PDF"], ["NotesLarge.pdf","Large print PDF"], ["Notes.docx","Accessible Word document"], ["Notes.epub","Accessible EPub book" ]]
       sharing: no
     pandoc_args: --default-image-extension=svg
+  clavertondown::pdf_clav:
+    latex_engine: pdflatex
+    keep_tex: true
+    fig_caption: true
+    toc: true
+    extra_dependencies: ["float"]
+    pandoc_args: --default-image-extension=pdf
   clavertondown::epub_clav:
     toc: false
     pandoc_args: --default-image-extension=svg
@@ -26,13 +33,6 @@ output:
     number_sections: true
     keep_md: true
     pandoc_args: --default-image-extension=svg
-  clavertondown::pdf_clav:
-    latex_engine: pdflatex
-    keep_tex: true
-    fig_caption: true
-    toc: true
-    extra_dependencies: ["float"]
-    pandoc_args: --default-image-extension=pdf
 linkcolor: blue
 header-includes:
   - \newcommand{\BOO}{BOO}
@@ -45,6 +45,7 @@ header-includes:
 
 * Requirements
 * Formats and transforms
+* Markdown
 * RMarkdown
 * Bookdown
 * Clavertondown
@@ -58,6 +59,7 @@ header-includes:
   * [EPub3 with MathML](https://docs.mathjax.org/en/v2.7-latest/misc/epub.html)
 * Equality Act 2010
   * Authors may need to provide additional formats to meet the needs of a specific student
+  * Not all screenreaders or other assistive technology can read all accessible formats e.g. you may need to produce Word on request even if you decide not to provide this to meet the Public Sector Boddies act. 
 
 # Formats and transforms
 
@@ -68,15 +70,26 @@ header-includes:
 <p class="caption">(\#fig:unnamed-chunk-1)Accessible and interactive map at https://www.mindomo.com/mindmap/document-transforms-2d8186b662758e26ccf50ef82a3828b2</p>
 </div>
 
+# Markdown
+
+"Markdown is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML)."
+
+John Grubber, Markdown creator
+https://daringfireball.net/projects/markdown/
+
 # RMarkdown
 
-* Simple one page documents 
+* Simple one page documents containing maths and/or statistics 
+* RStudio provides a GUI interface
+* Multiple output formats with consistent structure 
   * Accessible: HTML, Word
   * Accessible if no mathematical content: ODT, RTF
   * Inaccessible: LaTeX/PDF
-* Slides
-  * Possibly accessible: PowerPoint, HTML using ioslides, reveal.js, Slidy
-  * Inaccessible: LaTeX/Beamer
+  * Slides
+    * Possibly accessible: PowerPoint, HTML using ioslides, reveal.js, Slidy
+    * Inaccessible: LaTeX/Beamer
+
+For further information on getting started, an example and how to test for accessibility at [RMarkdown Workshop](https://stem-enable.github.io/RMarkdownWorkshop/)
   
 # Bookdown
 
@@ -84,7 +97,7 @@ header-includes:
 * Needed for:
   * Parts and appendices 
   * Finer control of figures
-  * Automatic numbering and cross-referencing of figures, tables with captions 
+  * Automatic numbering and cross-referencing of figures and tables with captions 
   * Cross referencing of pieces of text
   * Equation numbering and referencing
   * Theorem and proof environments with numbering and referencing
@@ -92,27 +105,30 @@ header-includes:
   * Citation management via Pandoc, biblatex or natbib
   * Embedding of web pages and HTML widgets
 * Output to HTML book, LaTeX/PDF and EPub3 only
+  * Multiple output formats but structure may be inconsistent e.g. numbering is internally consistent but may differ between formats
 
 
 # ClavertonDown
 
-* Designed to enable authors of **lecture notes** to meet the diverse needs of students by production of a coherent **set** of formats
+* Designed to enable authors of **lecture notes** to meet the diverse needs of students by production of a consistent **set** of formats
 * Needed for:
   * Bookdown features but with transformation to Word 
-  * Flexible theorem-like environments akin to newtheorem in LaTeX including styling, numbering and classification of type to enable structured colour
+  * Flexible theorem-like environments akin to amsthm package in LaTeX including consistent styling, numbering and classification of type across multiple output formats
     * Numbering system of inbuilt Bookdown theorems can be changed
-    * It is possible to reference other environments within theorem names
-    * Unnumbered theorem environments 
+    * Internal references within theorem names and captions
+    * Unnumbered theorem environments with original numbering
     * Shared numbering e.g. between theorem and proposition 
     * Newtheorem-type definition of theorem-like environments
     * Repeating theorem-like environments
-  * Inclusion of figures in knitr engine based custom blocks including all theorem-like 
+  * Inclusion of figures in knitr engine based custom blocks, including all theorem-like, while still allowing transform to Word 
   * Supplied limited controls over visual presentation to enable a coherent set of notes with 
     * Known accessibility features
-    * Clear visual markers of structure
+    * Clear visual markers of structure including structured colour for theorem-like environments in non-PDF formats
 * Output as a mini-linked site of a set of formats which can include HTML book, HTML page, Word, EPub3, standard PDF, clear print PDF and large print PDF
 
-# More information
+# Made at Claverton Down
+
+ClavertonDown is built by MASH, if you need something to work differently we may be able to adapt it for you. However, you should only use ClavertonDown if you cannot achieve what you need using Bookdown as going back requires you to undo all use of extra features!
 
 * [ClavertonDown](https://bathmash.github.io/clavertondown/)
 * [MASH Accessible Maths project](https://www.bath.ac.uk/projects/mathematics-accessibility/)

@@ -189,10 +189,11 @@ img {
 <li><a href="#an-introduction">An introduction</a></li>
 <li><a href="#requirements"><span class="toc-section-number">1</span> Requirements</a></li>
 <li><a href="#formats-and-transforms"><span class="toc-section-number">2</span> Formats and transforms</a></li>
-<li><a href="#rmarkdown"><span class="toc-section-number">3</span> RMarkdown</a></li>
-<li><a href="#bookdown"><span class="toc-section-number">4</span> Bookdown</a></li>
-<li><a href="#clavertondown"><span class="toc-section-number">5</span> ClavertonDown</a></li>
-<li><a href="#more-information"><span class="toc-section-number">6</span> More information</a></li>
+<li><a href="#markdown"><span class="toc-section-number">3</span> Markdown</a></li>
+<li><a href="#rmarkdown"><span class="toc-section-number">4</span> RMarkdown</a></li>
+<li><a href="#bookdown"><span class="toc-section-number">5</span> Bookdown</a></li>
+<li><a href="#clavertondown"><span class="toc-section-number">6</span> ClavertonDown</a></li>
+<li><a href="#made-at-claverton-down"><span class="toc-section-number">7</span> Made at Claverton Down</a></li>
 </ul>
 </div>
 <!--bookdown:toc:end-->
@@ -203,6 +204,7 @@ img {
 <ul>
 <li>Requirements</li>
 <li>Formats and transforms</li>
+<li>Markdown</li>
 <li>RMarkdown</li>
 <li>Bookdown</li>
 <li>Clavertondown</li>
@@ -221,6 +223,7 @@ img {
 <li>Equality Act 2010
 <ul>
 <li>Authors may need to provide additional formats to meet the needs of a specific student</li>
+<li>Not all screenreaders or other assistive technology can read all accessible formats e.g. you may need to produce Word on request even if you decide not to provide this to meet the Public Sector Boddies act.</li>
 </ul></li>
 </ul>
 </div>
@@ -235,31 +238,40 @@ Figure 2.1: Accessible and interactive map at <a href="https://www.mindomo.com/m
 </p>
 </div>
 </div>
-<div id="rmarkdown" class="section level1" number="3">
-<h1><span class="header-section-number">3</span> RMarkdown</h1>
+<div id="markdown" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Markdown</h1>
+<p>“Markdown is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML).”</p>
+<p>John Grubber, Markdown creator
+<a href="https://daringfireball.net/projects/markdown/" class="uri">https://daringfireball.net/projects/markdown/</a></p>
+</div>
+<div id="rmarkdown" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> RMarkdown</h1>
 <ul>
-<li>Simple one page documents
+<li>Simple one page documents containing maths and/or statistics</li>
+<li>RStudio provides a GUI interface</li>
+<li>Multiple output formats with consistent structure
 <ul>
 <li>Accessible: HTML, Word</li>
 <li>Accessible if no mathematical content: ODT, RTF</li>
 <li>Inaccessible: LaTeX/PDF</li>
-</ul></li>
 <li>Slides
 <ul>
 <li>Possibly accessible: PowerPoint, HTML using ioslides, reveal.js, Slidy</li>
 <li>Inaccessible: LaTeX/Beamer</li>
 </ul></li>
+</ul></li>
 </ul>
+<p>For further information on getting started, an example and how to test for accessibility at <a href="https://stem-enable.github.io/RMarkdownWorkshop/">RMarkdown Workshop</a></p>
 </div>
-<div id="bookdown" class="section level1" number="4">
-<h1><span class="header-section-number">4</span> Bookdown</h1>
+<div id="bookdown" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Bookdown</h1>
 <ul>
 <li>Designed to enable authors of <strong>books</strong> or longer structured documents</li>
 <li>Needed for:
 <ul>
 <li>Parts and appendices</li>
 <li>Finer control of figures</li>
-<li>Automatic numbering and cross-referencing of figures, tables with captions</li>
+<li>Automatic numbering and cross-referencing of figures and tables with captions</li>
 <li>Cross referencing of pieces of text</li>
 <li>Equation numbering and referencing</li>
 <li>Theorem and proof environments with numbering and referencing</li>
@@ -267,37 +279,41 @@ Figure 2.1: Accessible and interactive map at <a href="https://www.mindomo.com/m
 <li>Citation management via Pandoc, biblatex or natbib</li>
 <li>Embedding of web pages and HTML widgets</li>
 </ul></li>
-<li>Output to HTML book, LaTeX/PDF and EPub3 only</li>
+<li>Output to HTML book, LaTeX/PDF and EPub3 only
+<ul>
+<li>Multiple output formats but structure may be inconsistent e.g. numbering is internally consistent but may differ between formats</li>
+</ul></li>
 </ul>
 </div>
-<div id="clavertondown" class="section level1" number="5">
-<h1><span class="header-section-number">5</span> ClavertonDown</h1>
+<div id="clavertondown" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> ClavertonDown</h1>
 <ul>
-<li>Designed to enable authors of <strong>lecture notes</strong> to meet the diverse needs of students by production of a coherent <strong>set</strong> of formats</li>
+<li>Designed to enable authors of <strong>lecture notes</strong> to meet the diverse needs of students by production of a consistent <strong>set</strong> of formats</li>
 <li>Needed for:
 <ul>
 <li>Bookdown features but with transformation to Word</li>
-<li>Flexible theorem-like environments akin to newtheorem in LaTeX including styling, numbering and classification of type to enable structured colour
+<li>Flexible theorem-like environments akin to amsthm package in LaTeX including consistent styling, numbering and classification of type across multiple output formats
 <ul>
 <li>Numbering system of inbuilt Bookdown theorems can be changed</li>
-<li>It is possible to reference other environments within theorem names</li>
-<li>Unnumbered theorem environments</li>
+<li>Internal references within theorem names and captions</li>
+<li>Unnumbered theorem environments with original numbering</li>
 <li>Shared numbering e.g. between theorem and proposition</li>
 <li>Newtheorem-type definition of theorem-like environments</li>
 <li>Repeating theorem-like environments</li>
 </ul></li>
-<li>Inclusion of figures in knitr engine based custom blocks including all theorem-like</li>
+<li>Inclusion of figures in knitr engine based custom blocks, including all theorem-like, while still allowing transform to Word</li>
 <li>Supplied limited controls over visual presentation to enable a coherent set of notes with
 <ul>
 <li>Known accessibility features</li>
-<li>Clear visual markers of structure</li>
+<li>Clear visual markers of structure including structured colour for theorem-like environments in non-PDF formats</li>
 </ul></li>
 </ul></li>
 <li>Output as a mini-linked site of a set of formats which can include HTML book, HTML page, Word, EPub3, standard PDF, clear print PDF and large print PDF</li>
 </ul>
 </div>
-<div id="more-information" class="section level1" number="6">
-<h1><span class="header-section-number">6</span> More information</h1>
+<div id="made-at-claverton-down" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> Made at Claverton Down</h1>
+<p>ClavertonDown is built by MASH, if you need something to work differently we may be able to adapt it for you. However, you should only use ClavertonDown if you cannot achieve what you need using Bookdown as going back requires you to undo all use of extra features!</p>
 <ul>
 <li><a href="https://bathmash.github.io/clavertondown/">ClavertonDown</a></li>
 <li><a href="https://www.bath.ac.uk/projects/mathematics-accessibility/">MASH Accessible Maths project</a></li>

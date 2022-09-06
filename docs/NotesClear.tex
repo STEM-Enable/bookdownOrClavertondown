@@ -146,6 +146,8 @@
 \item
   Formats and transforms
 \item
+  Markdown
+\item
   RMarkdown
 \item
   Bookdown
@@ -179,6 +181,8 @@
   \tightlist
   \item
     Authors may need to provide additional formats to meet the needs of a specific student
+  \item
+    Not all screenreaders or other assistive technology can read all accessible formats e.g.~you may need to produce Word on request even if you decide not to provide this to meet the Public Sector Boddies act.
   \end{itemize}
 \end{itemize}
 
@@ -189,13 +193,25 @@
 \includegraphics[width=1\linewidth]{map} \caption{Accessible and interactive map at https://www.mindomo.com/mindmap/document-transforms-2d8186b662758e26ccf50ef82a3828b2}\label{fig:unnamed-chunk-1}
 \end{figure}
 
+\hypertarget{markdown}{%
+\section{Markdown}\label{markdown}}
+
+``Markdown is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML).''
+
+John Grubber, Markdown creator
+\url{https://daringfireball.net/projects/markdown/}
+
 \hypertarget{rmarkdown}{%
 \section{RMarkdown}\label{rmarkdown}}
 
 \begin{itemize}
 \tightlist
 \item
-  Simple one page documents
+  Simple one page documents containing maths and/or statistics
+\item
+  RStudio provides a GUI interface
+\item
+  Multiple output formats with consistent structure
 
   \begin{itemize}
   \tightlist
@@ -205,18 +221,20 @@
     Accessible if no mathematical content: ODT, RTF
   \item
     Inaccessible: LaTeX/PDF
-  \end{itemize}
-\item
-  Slides
+  \item
+    Slides
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Possibly accessible: PowerPoint, HTML using ioslides, reveal.js, Slidy
-  \item
-    Inaccessible: LaTeX/Beamer
+    \begin{itemize}
+    \tightlist
+    \item
+      Possibly accessible: PowerPoint, HTML using ioslides, reveal.js, Slidy
+    \item
+      Inaccessible: LaTeX/Beamer
+    \end{itemize}
   \end{itemize}
 \end{itemize}
+
+For further information on getting started, an example and how to test for accessibility at \href{https://stem-enable.github.io/RMarkdownWorkshop/}{RMarkdown Workshop}
 
 \hypertarget{bookdown}{%
 \section{Bookdown}\label{bookdown}}
@@ -235,7 +253,7 @@
   \item
     Finer control of figures
   \item
-    Automatic numbering and cross-referencing of figures, tables with captions
+    Automatic numbering and cross-referencing of figures and tables with captions
   \item
     Cross referencing of pieces of text
   \item
@@ -251,6 +269,12 @@
   \end{itemize}
 \item
   Output to HTML book, LaTeX/PDF and EPub3 only
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Multiple output formats but structure may be inconsistent e.g.~numbering is internally consistent but may differ between formats
+  \end{itemize}
 \end{itemize}
 
 \hypertarget{clavertondown}{%
@@ -259,7 +283,7 @@
 \begin{itemize}
 \tightlist
 \item
-  Designed to enable authors of \textbf{lecture notes} to meet the diverse needs of students by production of a coherent \textbf{set} of formats
+  Designed to enable authors of \textbf{lecture notes} to meet the diverse needs of students by production of a consistent \textbf{set} of formats
 \item
   Needed for:
 
@@ -268,16 +292,16 @@
   \item
     Bookdown features but with transformation to Word
   \item
-    Flexible theorem-like environments akin to newtheorem in LaTeX including styling, numbering and classification of type to enable structured colour
+    Flexible theorem-like environments akin to amsthm package in LaTeX including consistent styling, numbering and classification of type across multiple output formats
 
     \begin{itemize}
     \tightlist
     \item
       Numbering system of inbuilt Bookdown theorems can be changed
     \item
-      It is possible to reference other environments within theorem names
+      Internal references within theorem names and captions
     \item
-      Unnumbered theorem environments
+      Unnumbered theorem environments with original numbering
     \item
       Shared numbering e.g.~between theorem and proposition
     \item
@@ -286,7 +310,7 @@
       Repeating theorem-like environments
     \end{itemize}
   \item
-    Inclusion of figures in knitr engine based custom blocks including all theorem-like
+    Inclusion of figures in knitr engine based custom blocks, including all theorem-like, while still allowing transform to Word
   \item
     Supplied limited controls over visual presentation to enable a coherent set of notes with
 
@@ -295,15 +319,17 @@
     \item
       Known accessibility features
     \item
-      Clear visual markers of structure
+      Clear visual markers of structure including structured colour for theorem-like environments in non-PDF formats
     \end{itemize}
   \end{itemize}
 \item
   Output as a mini-linked site of a set of formats which can include HTML book, HTML page, Word, EPub3, standard PDF, clear print PDF and large print PDF
 \end{itemize}
 
-\hypertarget{more-information}{%
-\section{More information}\label{more-information}}
+\hypertarget{made-at-claverton-down}{%
+\section{Made at Claverton Down}\label{made-at-claverton-down}}
+
+ClavertonDown is built by MASH, if you need something to work differently we may be able to adapt it for you. However, you should only use ClavertonDown if you cannot achieve what you need using Bookdown as going back requires you to undo all use of extra features!
 
 \begin{itemize}
 \tightlist
