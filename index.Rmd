@@ -45,6 +45,7 @@ header-includes:
 
 * Requirements
 * Formats and transforms
+* Markdown
 * RMarkdown
 * Bookdown
 * Clavertondown
@@ -68,15 +69,26 @@ library(webshot)
 knitr::include_url("https://www.mindomo.com/mindmap/document-transforms-2d8186b662758e26ccf50ef82a3828b2?embed")
 ```
 
+# Markdown
+
+"Markdown is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML)."
+
+John Grubber, Markdown creator
+https://daringfireball.net/projects/markdown/
+
 # RMarkdown
 
-* Simple one page documents 
+* Simple one page documents containing maths or statistics 
+* RStudio provides a GUI interface
+* Multiple output formats 
   * Accessible: HTML, Word
   * Accessible if no mathematical content: ODT, RTF
   * Inaccessible: LaTeX/PDF
-* Slides
-  * Possibly accessible: PowerPoint, HTML using ioslides, reveal.js, Slidy
-  * Inaccessible: LaTeX/Beamer
+  * Slides
+    * Possibly accessible: PowerPoint, HTML using ioslides, reveal.js, Slidy
+    * Inaccessible: LaTeX/Beamer
+
+For further information on getting started, an example and how to test for accessibility see https://stem-enable.github.io/RMarkdownWorkshop/
   
 # Bookdown
 
@@ -96,7 +108,7 @@ knitr::include_url("https://www.mindomo.com/mindmap/document-transforms-2d8186b6
 
 # ClavertonDown
 
-* Designed to enable authors of **lecture notes** to meet the diverse needs of students by production of a coherent **set** of formats
+* Designed to enable authors of **lecture notes** to meet the diverse needs of students by production of a consistent **set** of formats
 * Needed for:
   * Bookdown features but with transformation to Word 
   * Flexible theorem-like environments akin to newtheorem in LaTeX including styling, numbering and classification of type to enable structured colour
@@ -106,7 +118,7 @@ knitr::include_url("https://www.mindomo.com/mindmap/document-transforms-2d8186b6
     * Shared numbering e.g. between theorem and proposition 
     * Newtheorem-type definition of theorem-like environments
     * Repeating theorem-like environments
-  * Inclusion of figures in knitr engine based custom blocks including all theorem-like 
+  * Inclusion of figures in knitr engine based custom blocks, including all theorem-like, while still allowing transform to Word 
   * Supplied limited controls over visual presentation to enable a coherent set of notes with 
     * Known accessibility features
     * Clear visual markers of structure
